@@ -1,0 +1,4 @@
+@echo off
+rem ???????8765 + 7880??
+rem ???????????????????? 25 ????????? 502?
+powershell -NoProfile -ExecutionPolicy Bypass -Command "foreach($p in 8765,7880){ Get-NetTCPConnection -LocalPort $p -State Listen -ErrorAction SilentlyContinue | Select-Object -ExpandProperty OwningProcess -Unique | ForEach-Object { Stop-Process -Id $_ -Force -ErrorAction SilentlyContinue } }"

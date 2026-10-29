@@ -1,0 +1,38 @@
+{
+  "host": "127.0.0.1",
+  "port": 8765,
+  "backend": "http",
+  "max_chars": 300,
+  "log_file": "bridge.log",
+
+  "http_backend": {
+    "url": "http://127.0.0.1:7880",
+    "path": "/v1/audio/speech",
+    "format": "openai",
+    "model": "index-tts2",
+    "timeout": 600,
+    "headers": {},
+    "extra": {}
+  },
+
+  "indextts": {
+    "repo": "",
+    "cfg_path": "",
+    "model_dir": "",
+    "use_fp16": false,
+    "use_cuda_kernel": false,
+    "use_deepspeed": false,
+    "device": ""
+  },
+
+  "voices": {
+    "default": {
+      "ref_audio": "xiaoyu.wav",
+      "ref_text": ""
+    },
+    "xiaoyu": {
+      "ref_audio": "xiaoyu.wav",
+      "ref_text": ""
+    }
+  }
+}

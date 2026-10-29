@@ -1,0 +1,17 @@
+# 占位语音包：让 SurfCore 设置页的「语音 → 启动」按钮可用。
+#
+# SurfCore 判定「已安装」只看这个文件在不在；[voice.characters] 里的名字可以在
+# 设置页选（tts.character）。真正的推理在 ../env + ../api（IndexTTS2 整合包），
+# 入口兼容层在 ../index-tts-bridge（由 install.ps1 复制进去）。
+#
+# 这里不需要 token / 密钥：8765 只 bind 回环。
+
+[server]
+host = "127.0.0.1"
+port = 8765
+
+[voice]
+default = "xiaoyu"
+
+[voice.characters]
+xiaoyu = "xiaoyu"
